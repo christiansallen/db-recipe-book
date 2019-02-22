@@ -9,6 +9,8 @@ exports.up = function(knex, Promise) {
       .integer("ingredients_ID")
       .references("id")
       .inTable("ingredients");
+
+    table.float("quantity").notNullable();
   });
 };
 

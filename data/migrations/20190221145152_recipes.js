@@ -5,7 +5,8 @@ exports.up = function(knex, Promise) {
     table
       .integer("dishes_ID")
       .references("id")
-      .inTable("dishes");
+      .inTable("dishes")
+      .notNullable();
   });
 };
 
